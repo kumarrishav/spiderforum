@@ -49,10 +49,9 @@ xmlhttp1.send();
 }
 
 //vote up
-function loadXMLDoc2()
+function loadXMLDoc2(id1)
 {
 tex2="yes";
-id1="1";
 if (window.XMLHttpRequest)
   {
   xmlhttp2=new XMLHttpRequest();
@@ -72,7 +71,7 @@ xmlhttp2.send();
 }
 
 //vote down
-function loadXMLDoc3()
+function loadXMLDoc3(id2)
 {
 tex3="no";
 id2="2";
@@ -181,8 +180,8 @@ $num2=mysql_num_rows($count2);
 	
   echo "</br>"."<font size='4' face='arial' color='BLACK'>".$row1['answ_desc']."</font>";
   echo "</br>"."<font color='purple'>".str_repeat('&nbsp',95)."asked on".str_repeat('&nbsp',2).$row1['stamp']."</font>";
-  echo "<div id='yourdiv'>".$num2."</div><img src='voteup.png'  height='30' width='30' onclick='loadXMLDoc2()'>";
-  echo "<img src='votedown.png'  height='30' width='30' onclick='loadXMLDoc3()'>".str_repeat('&nbsp',30).
+  echo "<div id='yourdiv'>".$num2."</div><img src='voteup.png' id='".$anslike."' height='30' width='30' onclick='loadXMLDoc2(this.id)'>";
+  echo "<img src='votedown.png' id='".$anslike."'  height='30' width='30' onclick='loadXMLDoc3(this.id)'>".str_repeat('&nbsp',30).
        "<a href='sds.php'><font size='1' face='arial' color='red'>COMMENTS</font></a>".str_repeat('&nbsp',55).$name1."<hr style='border:1px dotted;'>";
   //echo "<script>document.getElementById('yourdiv').innerHTML=".$num2.";</script>"; 
 } 

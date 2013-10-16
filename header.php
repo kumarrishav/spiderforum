@@ -47,7 +47,7 @@ function gameLoop()
 
 </script>
 </head>
-<body bgcolor="#F2F2F2" onload="display();"> 
+<body bgcolor="white" onload="display();"> 
 <div class="container">
 <!--<div class="header">
 </div>-->
@@ -94,13 +94,11 @@ else
 <table>
 <tr>   
                  <td><hr>
-                               <a href="frontpage.php" style="text-decoration: none"><span style="font-size: 20px">Home</span></a>&nbsp;&nbsp;&nbsp;&nbsp;
-                               <a href="frontpage.php" style="text-decoration: none"><span style="font-size: 20px">Coding</span></a>&nbsp;&nbsp;&nbsp;
-							   <a href="frontpage.php" style="text-decoration: none"><span style="font-size: 20px">Web-Dev</span></a>&nbsp;&nbsp;&nbsp;
-                               <a href="frontpage.php" style="text-decoration: none"><span style="font-size: 20px">App-Dev</span></a>&nbsp;&nbsp;&nbsp;
-                               <a href="frontpage.php" style="text-decoration: none"><span style="font-size: 20px">Electronic</span></a>&nbsp;&nbsp;&nbsp;   
-                               <a href="frontpage.php" style="text-decoration: none"><span style="font-size: 20px">Notification</span></a>&nbsp;&nbsp;&nbsp;
-			                   <a href="frontpage.php" style="text-decoration: none"><span style="font-size: 20px">Rules & Regulations</span></a>&nbsp;&nbsp;&nbsp;
+                               <a href="frontpage.php" style="text-decoration: none"><span style="font-size: 20px">HOME</span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                               <a href="frontpage.php" style="text-decoration: none"><span style="font-size: 20px">WEB-DEVELOPMENT</span></a>&nbsp;&nbsp;&nbsp;
+							   <a href="frontpage.php" style="text-decoration: none"><span style="font-size: 20px">ANDROID-DEVELOPMENT</span></a>&nbsp;&nbsp;&nbsp;
+                               <a href="frontpage.php" style="text-decoration: none"><span style="font-size: 20px">ELECTRONICS</span></a>&nbsp;&nbsp;&nbsp;
+			                   <a href="frontpage.php" style="text-decoration: none"><span style="font-size: 20px">CODING</span></a>&nbsp;&nbsp;&nbsp;
 			            <a href="ask.php" style="text-decoration: none"><span style="font-size: 20px;background-color: orange;">  Ask Question </span></a>&nbsp;&nbsp;&nbsp;
 			<hr></td>
 			</tr>

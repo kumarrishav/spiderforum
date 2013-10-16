@@ -182,7 +182,7 @@ $num=mysql_num_rows($count);
   echo "</br>"."<font color='purple'>".str_repeat('&nbsp',95)."asked on".str_repeat('&nbsp',2).$row['stamp']."</font>";
   echo "<div id='mydiv'>".$num."</div><img src='voteup.png' height='30' width='30' onclick='loadXMLDoc()'>";
   echo "<img src='votedown.png' height='30' width='30' onclick='loadXMLDoc1()'>".
-	   str_repeat('&nbsp',105).$name;
+	   str_repeat('&nbsp',100).$name;
 	   
 	    //comment on question
 $result3 = mysql_query("Select * FROM quescomment where quesid='$detail'");
@@ -226,7 +226,7 @@ $num2=mysql_num_rows($count2);
   echo "</br>"."<font color='purple'>".str_repeat('&nbsp',95)."asked on".str_repeat('&nbsp',2).$row1['stamp']."</font>";
   echo "<div id='yourdiv'>".$num2."</div><img src='voteup.png' id='".$anslike."' height='30' width='30' onclick='loadXMLDoc2(this.id)'>";
   echo "<img src='votedown.png' id='".$anslike."'  height='30' width='30' onclick='loadXMLDoc3(this.id)'>".str_repeat('&nbsp',30).
-       str_repeat('&nbsp',55).$name1."<hr style='border:1px dotted;'>";
+       str_repeat('&nbsp',70).$name1."<hr style='border:1px dotted;'>";
   //<a href='sds.php'><font size='1' face='arial' color='red'>COMMENTS</font></a>
   //echo "<script>document.getElementById('yourdiv').innerHTML=".$num2.";</script>"; 
 } 

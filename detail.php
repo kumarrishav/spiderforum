@@ -62,8 +62,6 @@ if (window.XMLHttpRequest)
   if (xmlhttp2.readyState==4 && xmlhttp2.status==200)
     {
 	window.location.reload();
-	//var c=xmlhttp2.responseText;
-    //document.getElementById("yourdiv").innerHTML=c;
     }
   }
   
@@ -86,8 +84,6 @@ if (window.XMLHttpRequest)
   if (xmlhttp3.readyState==4 && xmlhttp3.status==200)
     {
 	window.location.reload();
-	//var c=xmlhttp3.responseText;
-    //document.getElementById("yourdiv").innerHTML=c;
     }
   }
   

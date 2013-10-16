@@ -21,7 +21,7 @@ $a[]="DataStrucure";
 $a[]="FirefoxOs";
 $a[]="Python";
 $a[]="Linux";
-
+//language
 //get the q parameter from URL
 $q=$_GET["q"];
 

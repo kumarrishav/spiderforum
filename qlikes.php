@@ -1,11 +1,12 @@
 <?php
 session_start();
+$use=$_GET['id'];
+include("connection.php");
 if(isset($_SESSION['USER']))
 {
 $name=$_SESSION['USER'];//here name instead of id
-$use=$_GET['id'];
 //echo $use;
-include("connection.php");
+
 $us=$_GET['te'];
 //echo $us;
 
@@ -22,10 +23,17 @@ else
 $stor1="UPDATE queslikes SET likes='$us' WHERE quesid='$use' AND useid='$name'";
 mysql_query($stor1);
 }
-}
 
 $count=mysql_query("SELECT likes FROM queslikes WHERE likes='yes' AND quesid='$use'");
 $num=mysql_num_rows($count);
 echo $num;
+}
 
+else
+		{
+			$count=mysql_query("SELECT likes FROM queslikes WHERE likes='yes' AND quesid='$use'");
+            $num=mysql_num_rows($count);
+            echo $num;
+
+		}
 ?>

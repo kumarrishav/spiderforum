@@ -1,11 +1,10 @@
 <?php
 session_start();
+$use=$_GET['id'];
+include("connection.php");
 if(isset($_SESSION['USER']))
 {
 $name=$_SESSION['USER'];//here name instead of id
-$use=$_GET['id'];//ans id
-//echo $use;
-include("connection.php");
 $us=$_GET['te'];
 //echo $us;
 
@@ -24,10 +23,14 @@ mysql_query($stor1);
 }
 }
 
-/*$page = $_SERVER['PHP_SELF'];
+else
+{
+echo "jhkj";
+$page = $_SERVER['PHP_SELF'];
 $sec = "10";
 header("Refresh: $sec; url=$page");
-
+}
+/*
 $count2=mysql_query("SELECT alikes FROM anslikes WHERE alikes='yes' AND ansid='$use'");
 echo $num2=mysql_num_rows($count2);
 */

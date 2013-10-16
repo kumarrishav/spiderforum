@@ -5,7 +5,7 @@
             <tr><td>
 <?php
 include ("connection.php"); 
-$sql="SELECT user.username,user.user_id,ques_desc,ques_title,ques_id,tags,use_id,stamp FROM user,question WHERE user.user_id=question.use_id ";
+$sql="SELECT user.username,user.user_id,ques_desc,ques_title,ques_id,tag1,tag2,tag3,tag4,tag5,Newtag,profile, use_id,stamp FROM user,question WHERE user.user_id=question.use_id ";
 $loop=mysql_query($sql,$dbc);
 /*
 $row=mysql_fetch_assoc($loop);
@@ -16,6 +16,7 @@ if($loop === FALSE) {
 }
 while($row = mysql_fetch_array($loop))
   {
+  echo "<b>PROFILE:-</b><font size='4' color='red'> <i><u>".$row['profile']."</u></i></font></br>";
   echo  "<div id='flag'></div>"."<a href='detail.php?id=".$row['ques_id']."'"."style='text-decoration: none'><font size='4' color='blue' face='New times roman'>"."<b>".strtoupper($row['ques_title'])."</b>"."</a>"."</font>"."</br>";
   if(strlen($row['ques_desc'])<190)
   {
@@ -25,7 +26,7 @@ while($row = mysql_fetch_array($loop))
   {
   echo "</br>"."<font size='4'>". substr($row['ques_desc'], 0, 190)."</font>"."..........";
   }
-  echo "</br>"."<font size='4' face='arial' color='red'>".$row['tags']."</font>";
+  echo "</br></br>"."<font size='3' face='arial' color='green'>".$row['tag1']."&nbsp;&nbsp;".$row['tag2']."&nbsp;&nbsp;".$row['tag3']."&nbsp;&nbsp;".$row['tag4']."&nbsp;&nbsp;".$row['tag5']."&nbsp;&nbsp;".$row['Newtag']."</font>";
   echo "</br>"."<font color='purple'>".str_repeat('&nbsp',95)."asked on".str_repeat('&nbsp',2).$row['stamp']."</font>";
   echo "</br>".str_repeat('&nbsp',120)." &nbsp;".$row['username']."<hr style='border:1px dotted;'>";
   }

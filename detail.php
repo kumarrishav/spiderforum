@@ -99,7 +99,7 @@ xmlhttp3.send();
 include ("connection.php"); 
 
 $detail= $_GET['id'];//question id
-$sql="SELECT ques_desc,ques_title,ques_id,tags,use_id,stamp FROM user ,question WHERE ques_id='$detail'";
+$sql="SELECT * FROM question WHERE ques_id='$detail'";
 $loop=mysql_query($sql,$dbc);
 
 if($loop === FALSE) 
@@ -145,7 +145,7 @@ $num=mysql_num_rows($count);
   echo "</br>"."<font size='5' face='arial' color='green'>"."QUESTION DESCRIPTION"."</font></br>";
   
   echo "</BR>"."<font size='4' face='arial' color='BLACK'>".$row['ques_desc']."</FONT>";
-  echo "</br>"."<font size='4' face='arial' color='red'>".$row['tags']."</font>";
+  echo "</br>"."<font size='4' face='arial' color='red'>".$row['tag1'].$row['tag2'].$row['tag3'].$row['tag4'].$row['tag5'].$row['Newtag']."</font>";
   echo "</br>"."<font color='purple'>".str_repeat('&nbsp',95)."asked on".str_repeat('&nbsp',2).$row['stamp']."</font>";
   echo "<div id='mydiv'>".$num."</div><img src='voteup.png' height='30' width='30' onclick='loadXMLDoc()'>";
   echo "<img src='votedown.png' height='30' width='30' onclick='loadXMLDoc1()'>".str_repeat('&nbsp',30).

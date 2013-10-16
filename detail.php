@@ -61,8 +61,9 @@ if (window.XMLHttpRequest)
   {
   if (xmlhttp2.readyState==4 && xmlhttp2.status==200)
     {
-	var c=xmlhttp2.responseText;
-    document.getElementById("yourdiv").innerHTML=c;
+	window.location.reload();
+	//var c=xmlhttp2.responseText;
+    //document.getElementById("yourdiv").innerHTML=c;
     }
   }
   
@@ -74,7 +75,6 @@ xmlhttp2.send();
 function loadXMLDoc3(id2)
 {
 tex3="no";
-id2="2";
 
 if (window.XMLHttpRequest)
   {
@@ -85,8 +85,9 @@ if (window.XMLHttpRequest)
   {
   if (xmlhttp3.readyState==4 && xmlhttp3.status==200)
     {
-	var c=xmlhttp3.responseText;
-    document.getElementById("yourdiv").innerHTML=c;
+	window.location.reload();
+	//var c=xmlhttp3.responseText;
+    //document.getElementById("yourdiv").innerHTML=c;
     }
   }
   

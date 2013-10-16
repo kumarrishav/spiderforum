@@ -24,8 +24,11 @@ mysql_query($stor1);
 }
 }
 
-
+/*$page = $_SERVER['PHP_SELF'];
+$sec = "10";
+header("Refresh: $sec; url=$page");
 
 $count2=mysql_query("SELECT alikes FROM anslikes WHERE alikes='yes' AND ansid='$use'");
 echo $num2=mysql_num_rows($count2);
+*/
 ?>

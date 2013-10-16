@@ -3,7 +3,7 @@
 <head>
 <script>
 var xmlhttp, xmlhttp1, xmlhttp2, xmlhttp3;
-var tex,tex1,tex2,tex3,id1,id2;
+var tex,tex1,tex2,tex3,id1,id2,ques,comments;
 //vote up
 function loadXMLDoc()
 {
@@ -89,7 +89,39 @@ if (window.XMLHttpRequest)
   
 xmlhttp3.open("GET","anslikes.php?te="+tex3+"&id="+id2,true);
 xmlhttp3.send();
+
 }
+
+function submit(ques)
+{
+ comments=document.getElementById("response").value;
+
+if (window.XMLHttpRequest)
+  {
+  xmlhttp3=new XMLHttpRequest();
+  }
+
+   xmlhttp3.onreadystatechange=function()
+  {
+  if (xmlhttp3.readyState==4 && xmlhttp3.status==200)
+    {
+	window.location.reload();
+    }
+  }
+  
+xmlhttp3.open("GET","quescomment.php?te="+comments+"&id="+ques,true);
+xmlhttp3.send();
+
+}
+
+
+
+
+function tr()
+	{
+   
+  document.getElementById("comments").style.display="block";
+  }
 </script>
 </head>
 <body>
@@ -115,6 +147,7 @@ $row = mysql_fetch_array($loop);
 $usename=$row['use_id'];
 $result = mysql_query("Select username From user where user_id='$usename'");
 $name=mysql_fetch_array($result)['username'];
+ 
 
 //ques likes count
 $count=mysql_query("SELECT likes FROM queslikes WHERE likes='yes' AND quesid='$detail'");
@@ -148,8 +181,22 @@ $num=mysql_num_rows($count);
   echo "</br>"."<font size='4' face='arial' color='red'>".$row['tag1'].$row['tag2'].$row['tag3'].$row['tag4'].$row['tag5'].$row['Newtag']."</font>";
   echo "</br>"."<font color='purple'>".str_repeat('&nbsp',95)."asked on".str_repeat('&nbsp',2).$row['stamp']."</font>";
   echo "<div id='mydiv'>".$num."</div><img src='voteup.png' height='30' width='30' onclick='loadXMLDoc()'>";
-  echo "<img src='votedown.png' height='30' width='30' onclick='loadXMLDoc1()'>".str_repeat('&nbsp',30).
-       "<a href='sds.php'><font size='1' face='arial' color='red'>COMMENTS</font></a>".str_repeat('&nbsp',55).$name."<hr style='border:1px dotted;'>";
+  echo "<img src='votedown.png' height='30' width='30' onclick='loadXMLDoc1()'>".
+	   str_repeat('&nbsp',105).$name;
+	   
+	    //comment on question
+$result3 = mysql_query("Select * FROM quescomment where quesid='$detail'");
+
+	   echo "<hr style='border:1px dotted;'>"."</BR>Comments:-</br>";
+	   while($name3 = mysql_fetch_array($result3))
+	   {
+  echo "<font size='2' face='arial' color='brown'>".$name3['comment']."</br>&nbsp&nbsp by &nbsp&nbsp".$name3['usrname']."&nbsp&nbsp @&nbsp&nbsp".$name3['time']."</FONT></br>";
+       }
+  
+  echo "</br><input type='button' value='comment' onclick='tr()'>
+	   <div id='comments' style='display:none;'><textarea name='comment' id ='response' rows='3' cols='75' /></textarea></br>
+	   <input type='button' value='submit' id='".$detail."' onclick='submit(this.id)'></div>
+	   <hr style='border:1px dotted;'>";
   //echo "<script>document.getElementById('mydiv').innerHTML=".$num.";</script>"; 
   
 
@@ -179,7 +226,8 @@ $num2=mysql_num_rows($count2);
   echo "</br>"."<font color='purple'>".str_repeat('&nbsp',95)."asked on".str_repeat('&nbsp',2).$row1['stamp']."</font>";
   echo "<div id='yourdiv'>".$num2."</div><img src='voteup.png' id='".$anslike."' height='30' width='30' onclick='loadXMLDoc2(this.id)'>";
   echo "<img src='votedown.png' id='".$anslike."'  height='30' width='30' onclick='loadXMLDoc3(this.id)'>".str_repeat('&nbsp',30).
-       "<a href='sds.php'><font size='1' face='arial' color='red'>COMMENTS</font></a>".str_repeat('&nbsp',55).$name1."<hr style='border:1px dotted;'>";
+       str_repeat('&nbsp',55).$name1."<hr style='border:1px dotted;'>";
+  //<a href='sds.php'><font size='1' face='arial' color='red'>COMMENTS</font></a>
   //echo "<script>document.getElementById('yourdiv').innerHTML=".$num2.";</script>"; 
 } 
   

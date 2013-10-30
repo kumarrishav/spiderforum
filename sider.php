@@ -1,3 +1,4 @@
+
 <html>
 <head>
 <style>
@@ -12,14 +13,14 @@ left:950;
 <body>
 <div id="sider">
 <h3><b>Popular Tags</b></h3>
-<a href="http://spider.nitt.edu" style="text-decoration: none">Php & Phpmyadmin</span></a><hr>
-<a href="http://spider.nitt.edu" style="text-decoration: none"><span style="font-size: 15px">Javascript</span></a><hr>
-<a href="http://spider.nitt.edu" style="text-decoration: none"><span style="font-size: 15px">Sql & Mysql</span></a><hr>
-<a href="http://spider.nitt.edu" style="text-decoration: none"><span style="font-size: 15px">Html & Css</span></a><hr>
-<a href="http://spider.nitt.edu" style="text-decoration: none"><span style="font-size: 15px">Android</span></a><hr>
-<a href="http://spider.nitt.edu" style="text-decoration: none"><span style="font-size: 15px">Algoritm</span></a><hr>
-<a href="http://spider.nitt.edu" style="text-decoration: none"><span style="font-size: 15px">Data Structure</span></a><hr>
-<a href="http://spider.nitt.edu" style="text-decoration: none"><span style="font-size: 15px">Electronic</span></a><hr>
+<a href='tagsearch.php?id=Php' style='text-decoration: none'>Php</span></a><hr>
+<a href='tagsearch.php?id=Mysql' style='text-decoration: none'>MySql</span></a><hr>
+<a href='tagsearch.php?id=Html' style='text-decoration: none'>Html</span></a><hr>
+<a href='tagsearch.php?id=Css' style='text-decoration: none'>Css</span></a><hr>
+<a href='tagsearch.php?id=graph' style='text-decoration: none'>Graph</span></a><hr>
+<a href='tagsearch.php?id=tree' style='text-decoration: none'>Tree</span></a><hr>
+<a href='tagsearch.php?id=C' style='text-decoration: none'>C++</span></a><hr>
+<a href='tagsearch.php?id=list' style='text-decoration: none'>List</span></a><hr>
 </div>
 </body>
 </html>

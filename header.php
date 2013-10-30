@@ -95,10 +95,10 @@ else
 <tr>   
                  <td><hr>
                                <a href="frontpage.php" style="text-decoration: none"><span style="font-size: 20px">HOME</span></a>&nbsp;&nbsp;&nbsp;&nbsp;
-                               <a href="frontpage.php" style="text-decoration: none"><span style="font-size: 20px">WEB-DEVELOPMENT</span></a>&nbsp;&nbsp;&nbsp;
-							   <a href="frontpage.php" style="text-decoration: none"><span style="font-size: 20px">ANDROID-DEVELOPMENT</span></a>&nbsp;&nbsp;&nbsp;
-                               <a href="frontpage.php" style="text-decoration: none"><span style="font-size: 20px">ELECTRONICS</span></a>&nbsp;&nbsp;&nbsp;
-			                   <a href="frontpage.php" style="text-decoration: none"><span style="font-size: 20px">CODING</span></a>&nbsp;&nbsp;&nbsp;
+                               <a href="filter.php?id=Web Development" style="text-decoration: none"><span style="font-size: 20px">WEB-DEVELOPMENT</span></a>&nbsp;&nbsp;&nbsp;
+							   <a href="filter.php?id=Andriod App Development" style="text-decoration: none"><span style="font-size: 20px">ANDROID-DEVELOPMENT</span></a>&nbsp;&nbsp;&nbsp;
+                               <a href="filter.php?id=Electronics" style="text-decoration: none"><span style="font-size: 20px">ELECTRONICS</span></a>&nbsp;&nbsp;&nbsp;
+			                   <a href="filter.php?id=Coding" style="text-decoration: none"><span style="font-size: 20px">CODING</span></a>&nbsp;&nbsp;&nbsp;
 			            <a href="ask.php" style="text-decoration: none"><span style="font-size: 20px;background-color: orange;">  Ask Question </span></a>&nbsp;&nbsp;&nbsp;
 			<hr></td>
 			</tr>
